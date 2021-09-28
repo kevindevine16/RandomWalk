@@ -43,18 +43,18 @@ def ranWalk(start,n,color):
         
     plt.axes().set_aspect('equal', 'datalim')
     plt.title("Random Walk Starting at " + str(start)+" for "+str(n)+ " steps")
-    #plt.patch.set_facecolor('#ababab')
-    #plt.patch.set_alpha(0.5)
-    #fig = plt.figure()
+    # plt.patch.set_facecolor('#ababab')
+    # plt.patch.set_alpha(0.5)
+    # fig = plt.figure()
     # fig.patch.set_facecolor('black')
-    # fig.patch.set_alpha(0.3)
+    # fig.patch.set_alpha(0.7)
     # ax = fig.add_subplot(111)
     # ax.patch.set_facecolor('black')
-    # ax.patch.set_alpha(0.3)
+    # ax.patch.set_alpha(0.8)
     plt.show()
     return x
 start = 10
 n = 1000
-colors = [['blue', 'magenta','green']]
+colors = [['cyan', 'magenta','green']]
 for i in range(0,len(colors[0])):
     ranWalk(start,n,colors[0][i])
