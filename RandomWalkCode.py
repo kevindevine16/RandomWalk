@@ -53,8 +53,8 @@ def ranWalk(start,n,color):
     # ax.patch.set_alpha(0.8)
     plt.show()
     return x
-start = 10
-n = 1000
-colors = [['cyan', 'magenta','green']]
+start = 0
+n = 100
+colors = [['cyan', 'magenta','green','yellow','orange','red','black','indigo','violet']]
 for i in range(0,len(colors[0])):
     ranWalk(start,n,colors[0][i])
