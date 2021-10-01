@@ -36,8 +36,13 @@ def ranWalk(start,n,color):
     #fig = plt.figure(1,figsize=(4,4),dpi=180) 
     plt.scatter(x[:,0], x[:,1],c=color,alpha=0.55,s=0.15);
     plt.plot(x[:,0],x[:,1],c=color,alpha=0.55)
-    plt.plot(x[0,0], x[0,1],c="black", marker='+')
-    plt.plot(x[-1,0], x[-1,1],c='red', marker='o')
+    if color == 'violet':
+        plt.scatter(x[0,0], x[0,1],c="black", marker='^', label = 'Start point', zorder = 100)
+        plt.scatter(x[-1,0], x[-1,1],c='red', marker='o', label = 'End points', zorder = 100)
+        plt.legend()
+    else:
+        plt.scatter(x[0,0], x[0,1],c="black", marker='^', zorder = 100)
+        plt.scatter(x[-1,0], x[-1,1],c='red', marker='o', zorder = 100)
     plt.xlabel("$x_1$")
     plt.ylabel("$x_2$")
         
@@ -55,6 +60,6 @@ def ranWalk(start,n,color):
     return x
 start = 0
 n = 1000
-colors = [['cyan', 'magenta','green','yellow','orange','red','black','indigo','violet']]
+colors = [['cyan', 'magenta','green','yellow','orange','indigo','violet']]
 for i in range(0,len(colors[0])):
     ranWalk(start,n,colors[0][i])
